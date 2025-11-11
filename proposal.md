@@ -18,11 +18,11 @@
 ## Challenges
   For this to work ill need to learn/research and good handful of topics.
 
-  First, I will need to research how to run animations in pygame. 
+   First, I will need to research how to run animations in pygame. 
 
-  Second, I need to learn how to get that animation to play only when I click a button and not constantly.
+   Second, I need to learn how to get that animation to play only when I click a button and not constantly.
 
-  Third, Ill need to learn how to input the music into pygame since Ive never actually done that before.
+   Third, Ill need to learn how to input the music into pygame since Ive never actually done that before.
 
   Also, not really something Ill need to know cause I already know how to do it, but ill need to 2D animate these assets cause I'll need the png sequences of them to run the animations. I dont 2D animate often so I predict it'll be a challenge
 ## Outcomes
@@ -45,7 +45,7 @@
 ☐ Owl is viewable and animations work via button
 
 ☐ Fire is viewable and animations work via button
-  ### Week 3 (final Week)
+  ### Week 3 (Final Week)
 ☐ Asset mp4 and/or wav are in file
 
 ☐ Asset sounds play when button is pressed
