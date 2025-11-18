@@ -1,1 +1,2 @@
-print("Final Project: Day 1!")
+import pygame, sys
+
