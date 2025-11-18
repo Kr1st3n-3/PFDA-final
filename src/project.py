@@ -1,5 +1,4 @@
 import pygame, sys
-from PIL import Image
 
 def main():
     pygame.init()
@@ -8,7 +7,7 @@ def main():
     screen = pygame.display.set_mode(resolution)
     background_img = pygame.image.load("final_BG.PNG").convert_alpha()
     background_img = pygame.transform.scale(background_img, (resolution))
-    
+
     running = True
     while running:
         for event in pygame.event.get():
