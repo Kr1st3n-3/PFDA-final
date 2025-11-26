@@ -23,11 +23,13 @@ class Player(pygame.sprite.Sprite):
         
     def update(self):
         self.current_sprite += 1
+
         if self.current_sprite >= len(self.sprites):
             self.current_sprite = 0
+            
         self.image = self.sprites[self.current_sprite]
 
-# ==== Main program ====
+
 def main():
     pygame.init()
     clock = pygame.time.Clock()
@@ -63,7 +65,7 @@ def main():
         moving_sprites.draw(screen)
         pygame.display.flip()
         clock.tick(24)
-
+            
     pygame.quit()
     sys.exit()
 
