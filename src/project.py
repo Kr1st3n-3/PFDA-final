@@ -63,7 +63,9 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
                     player.animate()
+                    
 
 
         # Draw background first
