@@ -35,6 +35,40 @@ class Player(pygame.sprite.Sprite):
             
         self.image = self.sprites[int(self.current_sprite)]
 
+class Player1(pygame.sprite.Sprite):
+    def __init__(self1, pos_x,pos_y):
+        super().__init__()
+        self1.sprites = []
+        self1.is_animating = False
+        self1.sprites.append(pygame.image.load('fireflys_frame1.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame2.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame3.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame4.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame5.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame6.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame7.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame8.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame9.PNG'))
+        self1.sprites.append(pygame.image.load('fireflys_frame10.PNG'))
+        self1.current_sprite = 0
+        self1.image = self1.sprites[self1.current_sprite]
+
+        self1.rect = self1.image.get_rect()
+        self1.rect.topleft = [pos_x, pos_y]
+
+    def animate(self1):
+        self1.is_animating = True
+        
+    def update(self1,speed):
+        if self1.is_animating == True:
+            self1.current_sprite += speed
+
+        if self1.current_sprite >= len(self1.sprites):
+            self1.current_sprite = 0
+            self1.is_animating = False
+            
+        self1.image = self1.sprites[int(self1.current_sprite)]
+
 
 def main():
     pygame.init()
