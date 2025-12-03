@@ -82,14 +82,18 @@ def main():
 
     # Create sprite group and player
     moving_sprites = pygame.sprite.Group()
-    player = Player(80, 170)  # somewhere visible
-    moving_sprites.add(player)
+    player = Player(80, 170) 
+    player1 = Player1(80,100) # somewhere visible
+    moving_sprites.add(player,player1)
 
     # Scale all frames so fire is visible
     for i in range(len(player.sprites)):
         player.sprites[i] = pygame.transform.scale(player.sprites[i], (600, 600))
     player.image = player.sprites[player.current_sprite]
 
+    for i in range(len(player1.sprites)):
+        player1.sprites[i] = pygame.transform.scale(player1.sprites[i], (650, 650))
+    player1.image = player1.sprites[player1.current_sprite]
 
     running = True
     while running:
@@ -99,6 +103,8 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_a:
                     player.animate()
+                if event.key == pygame.K_w:
+                    player1.animate()
                     
 
 
