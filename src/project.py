@@ -69,6 +69,67 @@ class Player1(pygame.sprite.Sprite):
             
         self1.image = self1.sprites[int(self1.current_sprite)]
 
+class Player2(pygame.sprite.Sprite):
+    def __init__(self2, pos_x,pos_y):
+        super().__init__()
+        self2.sprites = []
+        self2.is_animating = False
+        self2.sprites.append(pygame.image.load('owl_frame1.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame2.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame3.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame4.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame5.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame6.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame7.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame8.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame9.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame10.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame11.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame12.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame13.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame14.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame15.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame16.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame17.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame18.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame19.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame20.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame21.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame22.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame23.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame24.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame25.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame26.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame27.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame28.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame29.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame30.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame31.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame32.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame33.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame34.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame35.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame36.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame37.PNG'))
+        self2.sprites.append(pygame.image.load('owl_frame38.PNG'))
+        self2.current_sprite = 0
+        self2.image = self2.sprites[self2.current_sprite]
+
+        self2.rect = self2.image.get_rect()
+        self2.rect.topleft = [pos_x, pos_y]
+
+    def animate(self2):
+        self2.is_animating = True
+        
+    def update(self2,fps=0.5):
+        if self2.is_animating == True:
+            self2.current_sprite += fps
+
+        if self2.current_sprite >= len(self2.sprites):
+            self2.current_sprite = 0
+            self2.is_animating = False
+            
+        self2.image = self2.sprites[int(self2.current_sprite)]
 
 def main():
     pygame.init()
@@ -84,7 +145,8 @@ def main():
     moving_sprites = pygame.sprite.Group()
     player = Player(80, 170) 
     player1 = Player1(80,100) # somewhere visible
-    moving_sprites.add(player,player1)
+    player2 = Player2(20,23)
+    moving_sprites.add(player,player1,player2)
 
     # Scale all frames so fire is visible
     for i in range(len(player.sprites)):
@@ -94,6 +156,10 @@ def main():
     for i in range(len(player1.sprites)):
         player1.sprites[i] = pygame.transform.scale(player1.sprites[i], (650, 650))
     player1.image = player1.sprites[player1.current_sprite]
+
+    for i in range(len(player2.sprites)):
+        player2.sprites[i] = pygame.transform.scale(player2.sprites[i], (650, 650))
+    player2.image = player2.sprites[player2.current_sprite]
 
     running = True
     while running:
@@ -105,6 +171,8 @@ def main():
                     player.animate()
                 if event.key == pygame.K_w:
                     player1.animate()
+                if event.key == pygame.K_d:
+                    player2.animate()
                     
 
 
