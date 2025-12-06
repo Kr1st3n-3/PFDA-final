@@ -151,10 +151,10 @@ def main():
     background_img = pygame.transform.scale(background_img, resolution)
 
     white = (255,255,255)
-    my_font = pygame.font.SysFont("Arial", 48)
-    text_surface = my_font.render("A for fire, W for fireflys, and D for owl",True, white)
+    my_font = pygame.font.SysFont("Arial", 24)
+    text_surface = my_font.render("Press A, W, or D for a bit of nightime fun:)",True, white)
     text_rect = text_surface.get_rect() 
-
+    text_rect = (180,30)
 
     # Create sprite group and player
     moving_sprites = pygame.sprite.Group()
