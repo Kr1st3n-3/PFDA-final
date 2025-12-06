@@ -7,6 +7,9 @@
   - Campsite Background:
 
     This feature wont do anything itll just be a png of a campsite that sits as the backgrounds scene. It sets the mood and feel of the game. I'll need pygame.image.load to open the png as the background and get it to load.
+  - Instruction print:
+
+    This is feature will be just a text message that will sit on the screen and promp the player to click buttons A, W, or D. I will probably need python.type to do this, but I'll definitely need to do more research for how to achieve it cause thats just a guess.
   - Firefly animation:
     
     The features it'll have is just to run through a pngs to give the illusion of animation when the W button is pressed. It'll start and end in the same position so that on the repeat after it flows nicely. I have a feeling im gonna need to use an if statement for the button, but that's 100% a guess. I'll probablly also need the clock feature
@@ -22,7 +25,7 @@
   - Owl SFX:
     
     The feature of this is that when the same button, D, used to run the owl animation is pressed it'll also play an owl hooing mp3 so that theyre going at the same time. Google says that to to this I'll need .init() and the music in the same file.
-  - Firefly SFX:
+  - Fire SFX:
     
     The feature of this is that when the same button, A, used to run the fire animation is pressed it'll also play a fire crackling sound mp3 so that theyre going at the same time. Google says that to to this I'll need .init() and the music in the same file.
     - Background Music:
