@@ -4,17 +4,31 @@
 ## Description
   My program will show a nighttime camp scenery with stagnat assets: fireflys, owl, and fire. The player will be prompt to click specific buttons which when pushed will activate the animations and sound for the assets
 ## Features
+  - Campsite Background:
+
+    This feature wont do anything itll just be a png of a campsite that sits as the backgrounds scene. It sets the mood and feel of the game. I'll need pygame.image.load to open the png as the background and get it to load.
   - Firefly animation:
     
-    The features it'll have is just to run through a pngs to give the illustion of animation when a button it pressed. It'll start and end in the same position so that it flows nicely.  I have a feeling im gonna need to use an if statement for the button, but that's 100% a guess. I'll probablly also need the clock feature
+    The features it'll have is just to run through a pngs to give the illusion of animation when the W button is pressed. It'll start and end in the same position so that on the repeat after it flows nicely. I have a feeling im gonna need to use an if statement for the button, but that's 100% a guess. I'll probablly also need the clock feature
   - Owl animation:
     
-    The features it'll have is just to run through a pngs to give the illustion of animation when a button it pressed. It'll start and end in the same position so that it flows nicely.  I have a feeling im gonna need to use an if statement for the button, but tha's 100% a guess. I'll probablly also need the clock feature
+    The features it'll have is just to run through a pngs to give the illusion of animation when the D button is pressed. It'll start and end in the same position so that on repeat after it flows nicely. I have a feeling im gonna need to use an if statement for the button, but tha's 100% a guess. I'll probablly also need the clock feature
   - Fire animation:
     
-    The features it'll have is just to run through a pngs to give the illustion of animation when a button it pressed. It'll start and end in the same position so that it flows nicely.  I have a feeling im gonna need to use an if statement for the button, but that's 100% a guess. I'll probablly also need the clock feature
-  -  Asset music:
-    The feature of this is just that specific sounds should play at the same time as the animations because the same button that plays the animation will also play the sound. Google says that to to this I'll need .init() and the music in the same file.
+    The features it'll have is just to run through a number of pngs to give the illusion of animation when the A button is pressed. It'll start and end in the same position so that on the repeat after it flows nicely. I have a feeling im gonna need to use an if statement for the button, but that's 100% a guess. I'll probablly also need the clock feature
+  - Firefly SFX:
+    
+    The feature of this is that when the same button, W, used to run the firefly animation is pressed it'll also play a twinkling sound mp3 so that theyre going at the same time. Google says that to to this I'll need .init() and the music in the same file.
+  - Owl SFX:
+    
+    The feature of this is that when the same button, D, used to run the owl animation is pressed it'll also play an owl hooing mp3 so that theyre going at the same time. Google says that to to this I'll need .init() and the music in the same file.
+  - Firefly SFX:
+    
+    The feature of this is that when the same button, A, used to run the fire animation is pressed it'll also play a fire crackling sound mp3 so that theyre going at the same time. Google says that to to this I'll need .init() and the music in the same file.
+    - Background Music:
+    
+    The feature of this is that when the game screen is run the sound cricket sound mp3 will start playing as background music coninuously on a loop until the game is closed. The other sound will also be able to play on top of it. Google says that to to this I'll need to import micer from pygame and have the music in the same file.
+
 ## Challenges
   For this to work ill need to learn/research and good handful of topics.
 
@@ -46,7 +60,7 @@
 
 ☐ Fire is viewable and animations work via button
   ### Week 3 (Final Week)
-☐ Asset mp4 and/or wav are in file
+☐ Asset mp3 and/or wav are in file
 
 ☐ Asset sounds play when button is pressed
 
