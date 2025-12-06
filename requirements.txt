@@ -1,3 +1,4 @@
 # 3rd Party Library's need for this project
 "pygame"
 "sys"
+"mixer"
