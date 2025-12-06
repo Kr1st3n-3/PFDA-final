@@ -1,22 +1,13 @@
 import pygame, sys
 from pygame import mixer 
 
-# ==== Player class stays exactly the same ====
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos_x,pos_y):
         super().__init__()
         self.sprites = []
         self.is_animating = False
-        self.sprites.append(pygame.image.load('fire_frame1.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame2.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame3.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame4.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame5.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame6.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame7.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame8.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame9.PNG'))
-        self.sprites.append(pygame.image.load('fire_frame10.PNG'))
+        self.sprites = [pygame.image.load(f'fire_frame{i}.PNG')
+                        for i in range(1,11)]
         self.current_sprite = 0
         self.image = self.sprites[self.current_sprite]
 
@@ -41,16 +32,8 @@ class Player1(pygame.sprite.Sprite):
         super().__init__()
         self1.sprites = []
         self1.is_animating = False
-        self1.sprites.append(pygame.image.load('fireflys_frame1.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame2.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame3.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame4.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame5.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame6.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame7.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame8.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame9.PNG'))
-        self1.sprites.append(pygame.image.load('fireflys_frame10.PNG'))
+        self1.sprites = [pygame.image.load(f'fireflys_frame{i}.PNG')
+                         for i in range (1,11)]
         self1.current_sprite = 0
         self1.image = self1.sprites[self1.current_sprite]
 
@@ -73,46 +56,9 @@ class Player1(pygame.sprite.Sprite):
 class Player2(pygame.sprite.Sprite):
     def __init__(self2, pos_x,pos_y):
         super().__init__()
-        self2.sprites = []
         self2.is_animating = False
-        self2.sprites.append(pygame.image.load('owl_frame1.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame2.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame3.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame4.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame5.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame6.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame7.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame8.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame9.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame10.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame11.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame12.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame13.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame14.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame15.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame16.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame17.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame18.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame19.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame20.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame21.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame22.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame23.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame24.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame25.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame26.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame27.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame28.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame29.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame30.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame31.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame32.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame33.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame34.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame35.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame36.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame37.PNG'))
-        self2.sprites.append(pygame.image.load('owl_frame38.PNG'))
+        self2.sprites = [pygame.image.load(f'owl_frame{i}.PNG')
+                for i in range (1,39)]
         self2.current_sprite = 0
         self2.image = self2.sprites[self2.current_sprite]
 
@@ -140,7 +86,6 @@ def main():
     owl_sound = pygame.mixer.Sound("owl-hooting.mp3")
     firefly_sound = pygame.mixer.Sound("twinklesparkle.mp3")
     fire_sound = pygame.mixer.Sound("campfire_crackling.mp3")
-    
     mixer.music.load("night_crickets.mp3")
     mixer.music.play(-1)
 
@@ -156,14 +101,12 @@ def main():
     text_rect = text_surface.get_rect() 
     text_rect = (180,30)
 
-    # Create sprite group and player
     moving_sprites = pygame.sprite.Group()
     player = Player(80, 170) 
-    player1 = Player1(80,100) # somewhere visible
+    player1 = Player1(80,100)
     player2 = Player2(20,23)
     moving_sprites.add(player,player1,player2)
 
-    # Scale all frames so pngs are visible
     for i in range(len(player.sprites)):
         player.sprites[i] = pygame.transform.scale(player.sprites[i], (600, 600))
     player.image = player.sprites[player.current_sprite]
@@ -175,6 +118,7 @@ def main():
     for i in range(len(player2.sprites)):
         player2.sprites[i] = pygame.transform.scale(player2.sprites[i], (650, 650))
     player2.image = player2.sprites[player2.current_sprite]
+
 
     running = True
     while running:
@@ -193,13 +137,10 @@ def main():
                     player2.animate()
                     owl_sound.play()
             
-        # Draw background first
+        
         screen.blit(background_img, (0, 0))
-
         screen.blit(text_surface, text_rect)
-        # Update fire animation every frame
         moving_sprites.update(0.25)
-        # Draw player on top
         moving_sprites.draw(screen)
         pygame.display.flip()
         clock.tick(24)
