@@ -138,6 +138,7 @@ def main():
     clock = pygame.time.Clock()
     owl_sound = pygame.mixer.Sound("owl-hooting.mp3")
     firefly_sound = pygame.mixer.Sound("twinklesparkle.mp3")
+    fire_sound = pygame.mixer.Sound("campfire_crackling.mp3")
     
     mixer.music.load("night_crickets.mp3")
     mixer.music.play(-1)
@@ -177,6 +178,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_a:
                     player.animate()
+                    fire_sound.play()
                 if event.key == pygame.K_w:
                     player1.animate()
                     firefly_sound.play()
