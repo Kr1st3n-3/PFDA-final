@@ -134,6 +134,7 @@ class Player2(pygame.sprite.Sprite):
 
 def main():
     pygame.mixer.init()
+    pygame.font.init()
     pygame.init()
     clock = pygame.time.Clock()
     owl_sound = pygame.mixer.Sound("owl-hooting.mp3")
@@ -149,6 +150,12 @@ def main():
     background_img = pygame.image.load("final_BG.PNG").convert_alpha()
     background_img = pygame.transform.scale(background_img, resolution)
 
+    white = (255,255,255)
+    my_font = pygame.font.SysFont("Arial", 48)
+    text_surface = my_font.render("A for fire, W for fireflys, and D for owl",True, white)
+    text_rect = text_surface.get_rect() 
+
+
     # Create sprite group and player
     moving_sprites = pygame.sprite.Group()
     player = Player(80, 170) 
@@ -156,7 +163,7 @@ def main():
     player2 = Player2(20,23)
     moving_sprites.add(player,player1,player2)
 
-    # Scale all frames so fire is visible
+    # Scale all frames so pngs are visible
     for i in range(len(player.sprites)):
         player.sprites[i] = pygame.transform.scale(player.sprites[i], (600, 600))
     player.image = player.sprites[player.current_sprite]
@@ -186,11 +193,10 @@ def main():
                     player2.animate()
                     owl_sound.play()
             
-                    
-
-
         # Draw background first
         screen.blit(background_img, (0, 0))
+
+        screen.blit(text_surface, text_rect)
         # Update fire animation every frame
         moving_sprites.update(0.25)
         # Draw player on top
