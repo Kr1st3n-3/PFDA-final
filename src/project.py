@@ -137,7 +137,6 @@ def main():
                     player2.animate()
                     owl_sound.play()
             
-        
         screen.blit(background_img, (0, 0))
         screen.blit(text_surface, text_rect)
         moving_sprites.update(0.25)
