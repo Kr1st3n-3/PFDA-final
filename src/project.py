@@ -1,4 +1,5 @@
 import pygame, sys
+from pygame import mixer 
 
 # ==== Player class stays exactly the same ====
 class Player(pygame.sprite.Sprite):
@@ -132,8 +133,14 @@ class Player2(pygame.sprite.Sprite):
         self2.image = self2.sprites[int(self2.current_sprite)]
 
 def main():
+    pygame.mixer.init()
     pygame.init()
     clock = pygame.time.Clock()
+    owl_sound = pygame.mixer.Sound("owl-hooting.mp3")
+    firefly_sound = pygame.mixer.Sound("twinklesparkle.mp3")
+    
+    mixer.music.load("night_crickets.mp3")
+    mixer.music.play(-1)
 
     pygame.display.set_caption("Nighttime Fun")
     resolution = (800, 800)
@@ -164,6 +171,7 @@ def main():
     running = True
     while running:
         for event in pygame.event.get():
+
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.KEYDOWN:
@@ -171,8 +179,11 @@ def main():
                     player.animate()
                 if event.key == pygame.K_w:
                     player1.animate()
+                    firefly_sound.play()
                 if event.key == pygame.K_d:
                     player2.animate()
+                    owl_sound.play()
+            
                     
 
 
