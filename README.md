@@ -1,12 +1,20 @@
 # Nighttime Fun 🌌
-## What is my project?
+
+## Video Presentation URL
+
+https://youtu.be/WdUqJCRmv1c 
+
+## Git Repository
+
+https://github.com/Kr1st3n-3/PFDA-final.git
+## What is my Project?
 
 My project is an interactive piece of art portraying a nightime campsite. When you run the code itll open to a still image of the of the campside that I drew and with cricket chirping as background noise. Not only will it open to the campsite and crickets at the top a prompt is displayed asking you to "press A, W, or D for a bit of nightime fun". When those buttons are clicked they will trigger parts of the art to start animating. A animates the fire, W animates the fireflys, and D animates the owl. 
 
 A little about each animation: The fire animation is just random movement of the fire kinda like how real fire behaves. The firefly animation is a gradual increase in the color brightness of their lights. Last but not least, the owl animation is him opening his eyes. His eyes they dilate. Then, he looks around before the dilate back to how they were and then closes his eyes again. Each animation ends how they began so that the transistion between repetitions is smooth and bring back the still image look.
 
 In addition to their animations those same buttons, A, W, and D, also activate a sound effect that correlates to what is animating to play at the same time. The fire has a fire crackling sfx, the fireflys have a twinkling sfx, and the owl a hooting sfx. These sounds play on top of the background crickets as well as each other so if you wanted to hear them all at the the same time you could.
-## What does this repository consist of?
+## What Does This Repository Consist Of?
 
 This repository consist of 5 diffrent files.
 
