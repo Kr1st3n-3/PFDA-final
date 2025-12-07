@@ -20,7 +20,7 @@ This repository consist of 5 diffrent files.
 
 First, is the src file. This contains my python code called project.py, all of the pngs my code needs to run through to give the illusion of animation, and the sound mp3's for the crickets, fire, twinkle, and hooting.
 
-Second, is the README.md. This is what your reading now. A discription of what my project is, what my repository contains, and any design considerations I thought about.
+Second, is the README.md. This is what your reading now. A discription of what my project is, what my repository contains, and any design considerations I thought about.Also, the links to my repository and my video demonstration
 
 Third, is the credits.md. This is a document listing all the resources I used that helped with the creation of this project.
 
@@ -33,3 +33,6 @@ Lastly, is a requirements text file. This is basically a list of all the third p
 One of my big design consideration was that I needed the background to be set at night. This is because I knew I wanted to have sounds in there eventually and when I thought of sound associated with camping practically all happen at night. Campfire are only really lit at night. Owls are nocturnal and therefore only come out at night. Fireflys dont make a sound, but I really wanted to include them. However, you can only ever see them at night. I also wanted the image when its still to feel calm and cozy. I dont know why but it just doesnt feel like that as much during the day as it would at night. Daytime brings harsher light, people, cars, etc. Thats take away from the cozy feel.
 
 I also had to take into account, when deciding what things to animate in the nighttime scene, was actually doable for me. I am no 2d animator. I understang the gist of it, but I wouldnt say Im good at it. However, for the sake of this project and me not wanting to go searching for pngs animations online, I drew the animations myself and exported their pngs. Because I was drawing them and Im a beginner in 2d I had to think of animations I could definitely do and make look semi good. This led to the animations I have now where the movements are simpler, but still noticeably animating and cute.
+## Future Improvements
+
+One thing that Id love to improve with this project in the future is the fact that when I play the animations I have to wait till the animation is done before clicking it again. It wont just restart in the middle of a going animation which is what I would want because the sound works like that but the animation does not. Id like it to match with sound eventually
