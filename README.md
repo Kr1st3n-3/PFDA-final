@@ -36,4 +36,7 @@ I also had to take into account, when deciding what things to animate in the nig
 ## Future Improvements
 
 One thing that Id love to improve with this project in the future is the fact that when I play the animations I have to wait till the animation is done before clicking it again. It wont just restart in the middle of a going animation which is what I would want because the sound works like that but the animation does not. Id like it to match with sound eventually
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7982a1b14bc984571c237d7d03aae2c495e7fa6b
